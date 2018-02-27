@@ -15,11 +15,11 @@ func main() {
     var x string = "test data \n"
     
     start := time.Now()
-    for i := 0; i < 100000; i++ {
+    for i := 0; i < 1000000; i++ {
 		go fmt.Fprintf(file, x)
 	}
     elapsed := time.Since(start)
-    fmt.Printf("Binomial took %s \n", elapsed)
+    file.Close()
+    fmt.Printf("File writes took %s \n", elapsed)
 
-    defer file.Close()
 }

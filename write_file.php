@@ -4,7 +4,7 @@
     $fp = './write_file_php.txt';
 
     $time_start = microtime(true);
-    for($i = 0; $i < 100000; $i++) {
+    for($i = 0; $i < 1000000; $i++) {
         file_put_contents($fp, $data, FILE_APPEND | FILE_EX | FILE_NB);
     }
     $time_end = microtime(true);
